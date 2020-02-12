@@ -1,0 +1,42 @@
+% ====================
+% Ejemplo basado en el proyecto http://songs.sourceforge.net/
+% Documentation at: http://songs.sourceforge.net/songsdoc/songs.html
+% Actual tablature from: https://tex.stackexchange.com/a/49156
+% Index from https://tex.stackexchange.com/a/438598
+% ====================
+\documentclass{article}
+
+    % Notas:
+    %   Faltan los bajeos (con LilyPond)
+    %   Falta poner los acordes graficamente
+
+% ALL imports and configuration styles must be into config/main
+\usepackage{config/main}
+
+% For a chord to cover several words(I still doubt whether to put this change globally or by song)
+\MultiwordChords
+
+\begin{document}
+
+    \tableofcontents
+    \clearpage
+
+    \songsection{Cancionero de la Tuna de la ESCOM}
+    \begin{songs}{}
+
+        \input{examples/example_song.tex}
+        \input{src/caraluna/main.tex}
+        \input{src/de_azul_mi_corazon/main.tex}
+        \input{src/ese_no_se_que/main.tex}
+        \input{src/para_mi/main}
+
+    \end{songs}
+    
+    \songsection{Bajeos}
+        \input{examples/bajeo_de_ejemplo.tex}
+        
+    \songsection{Rasgueos}
+        \input{examples/rasgueo_de_ejemplo.tex}
+    
+    
+\end{document}
