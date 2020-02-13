@@ -5,7 +5,7 @@
 % Index from https://tex.stackexchange.com/a/438598
 % Online chord calculator: https://www.imusic-school.com/es/herramientas/acordes-guitarra/
 % ====================
-\documentclass{article}
+\documentclass[twoside]{article}
 
     % Notas:
     %   Faltan los bajeos (con LilyPond)
@@ -14,15 +14,14 @@
 % ALL imports and configuration styles must be into config/main
 \usepackage{config/main}
 
-% For a chord to cover several words(I still doubt whether to put this change globally or by song)
-\MultiwordChords
-
 \begin{document}
 
+    \phantomsection 
+    \hypertarget{indice}{}  % Make an anchor to the ToC
     \tableofcontents
     \clearpage
 
-    \songsection{Cancionero de la Tuna de la ESCOM}
+    \songsection{Cancionero}
     \begin{songs}{}
 
         \input{src/C/caraluna/main.tex}

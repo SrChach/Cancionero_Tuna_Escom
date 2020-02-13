@@ -8,7 +8,7 @@
 \usepackage[chorded]{songs}
 
 % library for tuning margins
-\usepackage{geometry}
+\usepackage[headheight=110pt]{geometry}
 
 % Package to support latin characters
 \usepackage[utf8]{inputenc}
@@ -18,12 +18,18 @@
 
 % Importing own library for creating tabs 
 \usepackage{config/guitartabs}
+
+% Library for customized Header and Footer
+\usepackage{fancyhdr}
 % ===== END IMPORTS =====
 
 
 % ===== BEGIN STYLING =====
 % Line for ignoring verse enumeration
 \noversenumbers
+
+% For a chord to cover several words
+\MultiwordChords
 
 % Changing margins
 \geometry{top=.75in,bottom=.75in,left=.75in,right=.75in}
@@ -55,4 +61,11 @@
     {\def\toctitle{\resettitles\addtotoc\songtitle}}
     {\def\toctitle{\addtotoc{#1}}}
 \renewcommand\extendprelude{\showrefs\showauthors\toctitle}
+
+% Customizing header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\hyperlink{indice}{Cancionero de la Tuna de la ESCOM}}
+\fancyhead[R]{\hyperlink{indice}{\leftmark}}
+\fancyfoot[C]{\thepage}
 % ===== END STYLING =====
