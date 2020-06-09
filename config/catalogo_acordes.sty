@@ -20,10 +20,20 @@
     \chordscheme[
         name = C,
 %%        position = 1, %%% Donde empieza el acorde
-        finger = {1/2 , 2/3, 3/4}
+        finger = {1/2, 2/4, 3/5}
 %       finger = {3/5}, %%% posicion, cuerda
 %       barre = 1/1-6,  %%% Traste, rango de cuerdas
 %       ring = {2,3,4}  %%% Cuerdas que se tocan, al inicio del acorde
+    ]
+}
+
+\newsavebox{\CVII}
+\savebox{\CVII}
+{
+    \chordscheme[
+        name = C7,
+        finger = {1/2, 2/4, 3/5, 3/3},
+        mute = 6
     ]
 }
 
